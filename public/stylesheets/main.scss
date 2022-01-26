@@ -1,0 +1,272 @@
+/* Resets */
+@import 'resets/normalize';
+@import 'resets/reset.local';
+
+// COMPONENTS
+
+// FONTS
+// TITLES : Architype Renner
+@font-face {
+    font-family: ARbold;
+    src: url(../../font/architype_renner/ArchitypeRenner-Bold.otf);
+}
+@font-face {
+    font-family: ARdemi;
+    src: url(../../font/architype_renner/ArchitypeRenner-Demi.otf);
+}
+@font-face {
+    font-family: ARmedium;
+    src: url(../../font/architype_renner/ArchitypeRenner-Medium.otf);
+}
+
+// BODY : Roboto Slab
+@font-face {
+    font-family: RSregular;
+    src: url(../../font/roboto_slab/RobotoSlab-Regular.ttf);
+}
+@font-face {
+    font-family: RSbold;
+    src: url(../../font/roboto_slab/RobotoSlab-Bold.ttf);
+}
+
+// Placeholders
+%mobile_flex_gap_pad{
+    display: flex;
+    gap:1.6em;
+    padding: 3.2em 1.6em;
+}
+
+// COLOR
+$black : #000000;
+$white : #FFFFFF;
+$oxford_blue : #091729;
+$lapis_lazuli : #2260A7;
+$rose_madder : #E40034;
+
+$cta : #18A0FB;
+
+// BASE
+html,body{
+    height: 100%;
+    width: 100%;
+}
+html{
+    font-size: 10px;
+}
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    // !delete
+    background-color: $oxford_blue;
+    color: $white;
+}
+p,a,button{
+    font-size: 1.6em;
+}
+p{
+    line-height: 1.4;
+}
+a{
+    color: $cta;
+}
+button{
+    font-family: ARmedium, sans-serif;
+    color: $white;
+    padding: 0.8em 1.6em;
+    background-color: $cta;
+}
+input{
+    padding: .5em 1em;
+    outline: 1px solid $cta;
+    border: none;
+}
+
+// ==== CUSTOM ====
+
+// HEADER
+.header{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6em;
+
+    &__logolink{
+        display: block;
+        height: 2.2em;
+        picture, img{
+            width: fit-content;
+        }
+    }
+
+    &__nav{
+        display: none;
+        // display: flex;
+        flex-direction: row;
+        gap: 3.2em;
+        font-family: ARmedium ,serif;
+        text-transform: uppercase;
+        flex-wrap: wrap;
+        a{
+            font-size: clamp(1.4em, 1vw, 1.6em) ;
+            padding: clamp(.4em, 1vw, .8em);
+        }
+    }
+
+    &__ctas{
+        display: none;
+        align-items: center;
+        gap: 3.2em;
+    }
+    &__btnresa{
+        text-transform: uppercase;
+    }
+    &__rslink{
+        display: none;
+        padding: .4em;
+    }
+    
+    &__burger{
+        width: 1.6em;
+        height: auto;
+    }
+
+
+    @media screen and (min-width : 768px) {
+        &__nav, &__ctas{
+            display: flex;
+        }
+        &__rslink{
+            display: none;
+        }
+        &__burger{
+            display: none;
+        }
+    }
+    @media screen and (min-width : 935px) {
+        &__rslink{
+            display: flex;
+            padding: .4em;
+        }
+    }
+}
+
+
+// HERO
+.hero{
+    height: 70vh;
+    display: grid;
+    place-items: center;
+    &__logo{
+        width: 136px;
+    }
+}
+
+
+// INTRODUCTION
+.intro{
+    @extend %mobile_flex_gap_pad;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ff0000;
+    &__title{
+        font-size:4em;
+        text-align: center;
+    }
+}
+
+// MENU
+.menu{
+    @extend %mobile_flex_gap_pad;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2em;
+    border: 1px solid rgb(0, 255, 8);
+    text-align: center;
+
+    &__header{
+        display: flex;
+        flex-direction: column;
+        padding: 3.2em;
+        gap: 1.6em;
+    }
+    &__title{
+        font-size: 3.2em;
+    }
+
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 6.4em;
+    }
+    &__bloc{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6em;
+    }
+    &__separator{
+        font-weight: bold;
+    }
+
+    &__blocprice{
+        margin-top: 1.6em;
+    }
+    &__price{
+        font-family: ARbold;
+        font-size: 3.2em;
+    }
+    &__conditions{
+        font-size: 1.4em;
+    }
+
+    &__button{
+        width: fit-content;
+    }
+
+}
+
+// EVENEMENTS
+.event{
+    display: flex;
+    gap:1.6em;
+    padding: 8em 1.6em; //! different du placeholder
+    flex-direction: column;
+    align-items: center;
+    gap: 8em;
+    border: 1px solid rgb(255, 0, 106);
+    text-align: left;
+    &__bloc{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6em;
+    }
+    &__title{
+        font-size: 3.2em;
+    }
+    &__date{
+        font-size: 1.4em;
+    }
+}
+
+
+// NEWSLETTER
+.newsletter{
+    outline: 1px solid $white;
+    padding: 3.2em 1.6em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.6em;
+    border: 1px solid rgb(0, 255, 242);
+
+    &__text{
+        font-size: 1.4em;
+        color: darken($white, 20%);
+    }
+
+    &__inputmail{
+        padding: .8em 1.6em;
+        text-align: center;
+    }
+}

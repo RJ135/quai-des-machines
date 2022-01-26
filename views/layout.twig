@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logos/quai_des_machines_logo_mini.svg" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheets/main.min.css">
+    <title>{{ titleIndex }}</title>
+</head>
+<body>
+    <header class="header">
+        <a class="header__logolink" href="#/">
+            <picture class='img'>
+              <source media="(min-width:1000px)" srcset="images/logos/quai_des_machines_logo_medium.svg"/>
+              <img src="images/logos/quai_des_machines_logo_mini.svg" alt="" />
+            </picture>
+        </a>
+        <nav class="header__nav">
+          <a class="header__navlink" href="#/">carte et menu</a>
+          <a class="header__navlink" href="#/">le restaurant</a>
+          <a class="header__navlink" href="#/">galerie</a>
+          <a class="header__navlink" href="#/">contact et accès</a>
+        </nav>
+        <div class="header__ctas">
+          <button class="header__btnresa">réserver</button>
+          <a class="header__rslink" href="#/">
+            <img src="images/icons/icon-facebook.svg" alt="" />
+          </a>
+          <a class="header__rslink" href="#/">
+            <img src="images/icons/icon-instagram.svg" alt="" />
+          </a>
+        </div>
+        <a class="header__burger" href="#/">
+            <img src="images/icons/icon-burger.svg" alt="" />
+        </a>
+    </header>
+
+    {% block body %}{% endblock %}
+
+    {% block footer %}{% endblock %}
+
+
+</body>
+</html>
