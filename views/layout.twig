@@ -7,21 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logos/quai_des_machines_logo_mini.svg" type="image/x-icon">
     <link rel="stylesheet" href="stylesheets/main.min.css">
-    <title>{{ titleIndex }}</title>
+    <title> Quai des Machines - {{ title }}</title>
 </head>
 <body>
+  <div id="wrapper">
+    {# HEADER #}
     <header class="header">
-        <a class="header__logolink" href="#/">
+        <a class="header__logolink" href="/accueil">
             <picture class='img'>
               <source media="(min-width:1000px)" srcset="images/logos/quai_des_machines_logo_medium.svg"/>
               <img src="images/logos/quai_des_machines_logo_mini.svg" alt="" />
             </picture>
         </a>
+        {# MAIN NAVIGATION #}
         <nav class="header__nav">
-          <a class="header__navlink" href="#/">carte et menu</a>
-          <a class="header__navlink" href="#/">le restaurant</a>
-          <a class="header__navlink" href="#/">galerie</a>
-          <a class="header__navlink" href="#/">contact et accès</a>
+          <a class="header__navlink" href="/carte-et-menu">carte et menu</a>
+          <a class="header__navlink" href="/restaurant">le restaurant</a>
+          <a class="header__navlink" href="/galerie">galerie</a>
+          <a class="header__navlink" href="/contact-et-acces">contact et accès</a>
         </nav>
         <div class="header__ctas">
           <button class="header__btnresa">réserver</button>
@@ -36,11 +39,75 @@
             <img src="images/icons/icon-burger.svg" alt="" />
         </a>
     </header>
-
+  
     {% block body %}{% endblock %}
+  
+    {# NEWLETTER #}
+    <section class="newsletter">
+      <h3 class="newsletter__title">Gardez le contact avec Le Quai des Machines</h3>
+  
+      <div class="newsletter__blocText">
+          <p class="newsletter__infos">
+          Événements : envoi 1 fois par mois
+          </p>
+          <p class="newsletter__infos">
+          Réduction : envoi ponctuel
+          </p>
+      </div>
+      <form action="post">
+        <input class="newsletter__inputmail" type="email" name="mail" id="mail" placeholder="votreadresse@mail.com"/>
+      </form>
+    </section>
+  
+    {# FOOTER #}
+    <footer class="footer">
+  
+      <h2 class="footer__title">Quai des Machines</h2>
+  
+      <section class="footer__content">
+        <div class="footer__infos">
+          <div class="footer__schedules">
+            <div class="footer__schedule">
+              <p>Lundi au vendredi :&nbsp;</p>
+              <p>11h45 - 14h et 18h - 22h</p>
+            </div>
+            <div class="footer__schedule">
+              <p>Samedi :&nbsp;</p>
+              <p>11h30 - 14h et 19h- 23h</p>
+            </div>
+            <div class="footer__schedule">
+              <p>Dimanche :&nbsp;</p>
+              <p>12h - 15h</p>
+            </div>
+          </div>
+          <address class="footer__address">
+            <a href="tel:+33251174989">+33 2 51 17 49 89</a>
+            <a href="mailto:quaidesmachines@gmail.com">quaidesmachines@gmail.com</a>
+          </address>
+        </div>
+  
+        <nav class="footer__nav">
+          <a href="#/">Carte et menu</a>
+          <a href="#/">Le restaurant</a>
+          <a href="#/">Galerie</a>
+          <a href="#/">Contact</a>
+        </nav>
+  
+        <nav class="footer__nav">
+          <a href="#/">Mentions légales</a>
+          <a href="#/">Politique de confidentialité</a>
+          <a href="#/">Recrutement</a>
+        </nav>
+  
+      </section>
+      
+      <div class="footer__separator"></div>
+  
+      <p class="footer__copyright">© Quai des Machines 2022</p>
+  
+    </footer>
 
-    {% block footer %}{% endblock %}
-
+  </div>
 
 </body>
 </html>

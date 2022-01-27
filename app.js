@@ -6,6 +6,7 @@ var logger = require('morgan');
 var livereload = require('livereload');
 var connectLiveReload = require("connect-livereload");
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -17,6 +18,8 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 });
 var app = express();
+
+
 
 app.use(connectLiveReload());
 
@@ -46,7 +49,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('404error');
 });
 
 module.exports = app;

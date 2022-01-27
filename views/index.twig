@@ -2,108 +2,90 @@
 
 {% block body %}
 
-<main>
+  {# INDEX PAGE ACCUEIL #}
+  <main>
+    {# HERO #}
+    <section class="hero">
+      <figure>
+        <img class="hero__logo" src="images/logos/quai_des_machines_logo_max.svg" alt="">
+      </figure>
+    </section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <figure>
-      <img class="hero__logo" src="images/logos/quai_des_machines_logo_max.svg" alt="">
-    </figure>
-  </section>
+    {# INTRODUCTION #}
+    <section class="intro">
+      <h1 class="intro__title">Quai des Machines</h1>
+      <p class="intro__text">Situé en plein coeur du Parc des Chantiers de Nantes, le Quai des Machines ouvre ses portes le 18 juin 2016 dans une véritable enceinte animalo-industrielle.
+      L’établissement propose une carte variée de viandes et de poissons aussi exotiques les uns que les autres. </p>
+    </section>
+    {# MENU #}
+    <section class="menu">
 
-  <!-- INTRODUCTION -->
-  <section class="intro">
-    <h1 class="intro__title"> {{ titleIndex }} </h1>
-    <p class="intro__text">Situé en plein coeur du Parc des Chantiers de Nantes, le Quai des Machines ouvre ses portes le 18 juin 2016 dans une véritable enceinte animalo-industrielle. L’établissement propose une carte variée de viandes et de poissons aussi exotiques les uns que les autres. </p>
-  </section>
+        <header class="menu__header">
+          <h2 class="menu__title">Menu de la semaine</h2>
+          <p class="menu__date">{{ dateMenu }} </p>
+        </header>
 
-  <!-- MENU -->
-  <section class="menu">
+        <section class="menu__content">
+          <!-- Entrées -->
+          <div class="menu__bloc">
+            <h3 class="menu__title">Entrées</h3>
+            <p class="menu_plat">Sacristains au saumon fumé</p>
+            <p class="menu__separator">ou</p>
+            <p class="menu_plat">Crème de chou-fleur au haddock fumé</p>
+          </div>
+          <!-- Plats -->
+          <div class="menu__bloc">
+            <h3 class="menu__title">Plats</h3>
+            <p class="menu_plat">Filet de poisson au citron confit</p>
+            <p class="menu__separator">ou</p>
+            <p class="menu_plat">Croustades de moules ch'ti</p>
+          </div>
+          <!-- Desserts -->
+          <div class="menu__bloc">
+            <h3 class="menu__title">Desserts</h3>
+            <p class="menu_plat">Nems bretons</p>
+            <p class="menu__separator">ou</p>
+            <p class="menu_plat">Gâteau de la forêt noire</p>
+          </div>
+        </section>
 
-      <header class="menu__header">
-        <h2 class="menu__title">Menu de la semaine</h2>
-        <p class="menu__date">{{ dateMenu }} </p>
-      </header>
-
-      <section class="menu__content">
-        <!-- Entrées -->
-        <div class="menu__bloc">
-          <h3 class="menu__title">Entrées</h3>
-          <p class="menu_plat">Sacristains au saumon fumé</p>
-          <p class="menu__separator">ou</p>
-          <p class="menu_plat">Crème de chou-fleur au haddock fumé</p>
+        <!-- Price -->
+        <div class="menu__blocprice">
+          <p class="menu__price"> {{ priceMenu }} €</p>
+          <p class="menu__conditions">(Hors Boissons)</p>
         </div>
-        <!-- Plats -->
-        <div class="menu__bloc">
-          <h3 class="menu__title">Plats</h3>
-          <p class="menu_plat">Filet de poisson au citron confit</p>
-          <p class="menu__separator">ou</p>
-          <p class="menu_plat">Croustades de moules ch'ti</p>
-        </div>
-        <!-- Desserts -->
-        <div class="menu__bloc">
-          <h3 class="menu__title">Desserts</h3>
-          <p class="menu_plat">Nems bretons</p>
-          <p class="menu__separator">ou</p>
-          <p class="menu_plat">Gâteau de la forêt noire</p>
-        </div>
-      </section>
+        
+        <button class="menu__button">voir notre carte</button>
+    </section>
 
-      <!-- Price -->
-      <div class="menu__blocprice">
-        <p class="menu__price"> {{ priceMenu }} €</p>
-        <p class="menu__conditions">(Hors Boissons)</p>
+    {# EVENEMENTS #}
+    <section class="event">
+      <!-- event 1 -->
+      <div class="event__bloc">
+        <figure>
+          <img src="//unsplash.it/400" alt="">
+        </figure>
+        <h2 class="event__title">Soirée à thème</h2>
+        <p class="event__date">Du 17 janvier au 22 janvier 2022</p>
+        <p class="event__text">
+          Les gens aiment les soirées à thème, que ce soit les années 80, 90, un thème hawaïen, Halloween ou Noël. Vous n’avez pas à le faire tous les jours, mais c’est une bonne idée de l’organiser plusieurs fois par semaine. 
+        </p>
       </div>
-
-      <button class="menu__button">voir notre carte</button>
-  </section>
-
-  <!-- EVENEMENTS -->
-  <section class="event">
-    <!-- event 1 -->
-    <div class="event__bloc">
-      <figure>
-        <img src="//unsplash.it/400" alt="">
-      </figure>
-      <h2 class="event__title">Soirée à thème</h2>
-      <p class="event__date">Du 17 janvier au 22 janvier 2022</p>
-      <p class="event__text">
-        Les gens aiment les soirées à thème, que ce soit les années 80, 90, un thème hawaïen, Halloween ou Noël. Vous n’avez pas à le faire tous les jours, mais c’est une bonne idée de l’organiser plusieurs fois par semaine. 
-      </p>
-    </div>
-    <!-- event 2 -->
-    <div class="event__bloc">
-      <figure>
-        <img src="//unsplash.it/400" alt="">
-      </figure>
-      <h2 class="event__title">Happy hour</h2>
-      <p class="event__date">Tout les jours à partir de 17h</p>
-      <p class="event__text">
-        Les gens aiment les soirées à thème, que ce soit les années 80, 90, un thème hawaïen, Halloween ou Noël.
-      </p>
-    </div>
-  </section>
-
-  <!-- NEWLETTER -->
-  <section class="newsletter">
-    <h3 class="newsletter__title">Gardez le contact avec Le Quai des Machines</h3>
-
-    <div class="newsletter__blocText">
-        <p class="newsletter__text">
-        Événements : envoi 1 fois par mois
+      <!-- event 2 -->
+      <div class="event__bloc">
+        <figure>
+          <img src="//unsplash.it/400" alt="">
+        </figure>
+        <h2 class="event__title">Happy hour</h2>
+        <p class="event__date">Tout les jours à partir de 17h</p>
+        <p class="event__text">
+          Les gens aiment les soirées à thème, que ce soit les années 80, 90, un thème hawaïen, Halloween ou Noël.
         </p>
-        <p class="newsletter__text">
-        Réduction : envoi ponctuel
-        </p>
-    </div>
+      </div>
+    </section>
 
-    <input class="newsletter__inputmail" type="email" name="mail" id="mail" placeholder="votreadresse@mail.com"/>
-</section>
-</main>
+  </main>
 
 {% endblock %}
 
 
-
-{% block footer %}
-{% endblock %}
