@@ -1,8 +1,64 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-<main>
-    <h1>Page {{ title }} </h1>
-</main>
+  {# PAGE CARTE ET MENU #}
+  <main>
+    {# HERO #}
+    <section class="hero">
+      <figure>
+        <img class="hero__logo" src="images/logos/quai_des_machines_logo_max.svg" alt="">
+      </figure>
+    </section>
+
+    {# INTRODUCTION #}
+    <section class="intro">
+      <h1 class="intro__title">{{ title }}</h1>
+      <p class="intro__text">Accommodés au choix de beurres composés ou de sauces maison et accompagnés de légumes frais de saison, et selon les envies de frites en deux cuisson, de pommes de terre fondantes, de risotto ou encore de mesclun de salade, ces viandes et poissons de très grande qualité promettent une expérience gastronomique unique à Nantes !</p>
+    </section>
+
+    {# MENU #}
+    <section class="menu">
+        <header class="menu__header">
+          <h2 class="menu__title">Menu de la semaine</h2>
+          <p class="menu__date">{{ dateMenu }} </p>
+        </header>
+
+        <section class="menu__content">
+          <!-- Entrées -->
+          <div class="menu__bloc">
+            <h3 class="menu__title">Entrées</h3>
+            <p class="menu_plat">Sacristains au saumon fumé</p>
+            <p class="menu__separator">ou</p>
+            <p class="menu_plat">Crème de chou-fleur au haddock fumé</p>
+          </div>
+          <!-- Plats -->
+          <div class="menu__bloc">
+            <h3 class="menu__title">Plats</h3>
+            <p class="menu_plat">Filet de poisson au citron confit</p>
+            <p class="menu__separator">ou</p>
+            <p class="menu_plat">Croustades de moules ch'ti</p>
+          </div>
+          <!-- Desserts -->
+          <div class="menu__bloc">
+            <h3 class="menu__title">Desserts</h3>
+            <p class="menu_plat">Nems bretons</p>
+            <p class="menu__separator">ou</p>
+            <p class="menu_plat">Gâteau de la forêt noire</p>
+          </div>
+        </section>
+
+        <!-- Price -->
+        <div class="menu__blocprice">
+          <p class="menu__price"> {{ priceMenu }} €</p>
+          <p class="menu__conditions">(Hors Boissons)</p>
+        </div>
+        
+        <button class="menu__button">voir notre carte</button>
+    </section>
+
+    {# CARTE #}
+    <section class="carte"></section>
+
+  </main>
 
 {% endblock %}

@@ -11,15 +11,15 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 const liveReloadServer = livereload.createServer();
-// liveReloadServer.watch(path.join(__dirname, 'public'));
+
 liveReloadServer.server.once("connection", () => {
   setTimeout(() => {
     liveReloadServer.refresh("/");
   }, 100);
 });
+
+
 var app = express();
-
-
 
 app.use(connectLiveReload());
 
