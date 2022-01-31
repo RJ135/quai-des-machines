@@ -1,13 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
+const data = {
+  dateMenu : 'Du 10 janvier au 16 janvier 2022',
+  priceMenu : 12
+}
+
 /* GET home page. */
 router
 .get(['/','/accueil'], function(req, res, next) {
-  res.render('index', { 
-    title: 'Accueil',
-    dateMenu : 'Du 10 janvier au 16 janvier 2022',
-    priceMenu : '12'
+  res.render('index', {
+    data
   })
 })
 .get('/carte-et-menu', function(req, res, next) {

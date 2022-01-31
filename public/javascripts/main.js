@@ -1,9 +1,10 @@
 const burger = document.querySelector(".header__burger")
 const main = document.querySelector("main")
 
-
 const boxnav = document.querySelector(".header__boxnav")
 const iconBurger = document.querySelector(".header__burgericon")
+
+const navlink = document.querySelector(".header__navlink")
 
 function toggleMenu(){
     boxnav.classList.toggle("header__active")
