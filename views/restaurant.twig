@@ -2,7 +2,17 @@
 
 {% block body %}
 <main>
-    <h1>Page {{ title }} </h1>
+    {# HERO #}
+    <section class="hero hero-restaurant"></section>
+
+    {# INTRODUCTION #}
+    <section class="intro">
+      <h1 class="intro__title">{{ title }}</h1>
+      <p class="intro__text">La nourriture y est généralement préparée par un chef cuisinier. 
+        Le terme couvre une multiplicité de lieux et une grande diversité des types de cuisines, tant locales qu'étrangères. </p>
+    </section>
+
+    
 </main>
 
 {% endblock %}

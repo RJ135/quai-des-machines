@@ -15,7 +15,7 @@ router
 })
 .get('/carte-et-menu', function(req, res, next) {
   res.render('carte-et-menu',{ 
-    title: 'Carte et Menu'
+    title: 'Carte et Menu', data
   })
 })
 .get('/restaurant', function(req, res, next) {

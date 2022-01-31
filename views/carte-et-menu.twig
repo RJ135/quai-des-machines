@@ -4,11 +4,7 @@
   {# PAGE CARTE ET MENU #}
   <main>
     {# HERO #}
-    <section class="hero">
-      <figure>
-        <img class="hero__logo" src="images/logos/quai_des_machines_logo_max.svg" alt="">
-      </figure>
-    </section>
+    <section class="hero hero-carte"></section>
 
     {# INTRODUCTION #}
     <section class="intro">
@@ -16,11 +12,64 @@
       <p class="intro__text">Accommodés au choix de beurres composés ou de sauces maison et accompagnés de légumes frais de saison, et selon les envies de frites en deux cuisson, de pommes de terre fondantes, de risotto ou encore de mesclun de salade, ces viandes et poissons de très grande qualité promettent une expérience gastronomique unique à Nantes !</p>
     </section>
 
+    {# CARTE #}
+    <section class="carte">
+        <h2 class="carte__title">Notre Carte</h2>
+      
+      <div class="carte__content">
+
+        <div class="carte__categories">
+          <h3 class="carte__titlecategory">Entrées</h3>
+          <h3 class="carte__titlecategory">Plats</h3>
+          <h3 class="carte__titlecategory">Desserts</h3>
+        </div>
+
+        <div class="carte__dishs">
+
+        <div class="carte__dishbloc">
+          <p class="carte__dishname">Salade tiède de saint-jacques au chou</p>
+          <p class="carte__dishdesc">Dans cette salade le croquant du chou cru, le tendre des coquilles saint-jacques sautées et le fondant des pommes de terre sont liés par une vinaigrette aux herbes.
+          </p>
+          <p class="carte__dishprice">7.4 €</p>
+        </div>
+        <div class="carte__dishbloc">
+          <p class="carte__dishname">Salade mi-croquante aux crevettes </p>
+          <p class="carte__dishdesc">Dans cette salade se mélange du croquant froid (radis, concombre, cornichons et oignons) du tendre froid également (tomates et riz), et des crevettes chaudes, cuites au four.
+          </p>
+          <p class="carte__dishprice">6.4 €</p>
+        </div>
+        <div class="carte__dishbloc">
+          <p class="carte__dishname">Oeufs cocotte au Comté</p>
+          <p class="carte__dishdesc">C'est un petit plat délicieux et vite fait, idéal pour répondre avec élégance à la question récurrente "qu'est-ce qu'on mange ce soir ?". Voici la version au Comté, mais elle peut être déclinée de très nombreuses façons.
+          </p>
+          <p class="carte__dishprice">3.3 €</p>
+        </div>
+        <div class="carte__dishbloc">
+          <p class="carte__dishname">Salade de betteraves et poulet grillé</p>
+          <p class="carte__dishdesc">Une salade de betteraves crues, mais enrichie avec des amandes torréfiées, des dés de poulet grillés et des petits morceaux de pommes de terre.
+          </p>
+          <p class="carte__dishprice">11.7 €</p>
+        </div>
+      </div>
+
+        <div class="carte__cta">
+          <button class="carte__btn">
+            <img src="images/icons/icon-download.svg" alt="">
+            Télécharger la carte
+          </button>
+          <span>format .pdf</span>
+        </div>
+
+
+      </div>
+
+    </section>
+
     {# MENU #}
     <section class="menu">
         <header class="menu__header">
           <h2 class="menu__title">Menu de la semaine</h2>
-          <p class="menu__date">{{ dateMenu }} </p>
+          <p class="menu__date">{{ data.dateMenu }} </p>
         </header>
 
         <section class="menu__content">
@@ -49,15 +98,12 @@
 
         <!-- Price -->
         <div class="menu__blocprice">
-          <p class="menu__price"> {{ priceMenu }} €</p>
+          <p class="menu__price"> {{ data.priceMenu }} €</p>
           <p class="menu__conditions">(Hors Boissons)</p>
         </div>
         
         <button class="menu__button">voir notre carte</button>
     </section>
-
-    {# CARTE #}
-    <section class="carte"></section>
 
   </main>
 
