@@ -1,18 +1,123 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-<main>
-    {# HERO #}
-    <section class="hero hero-restaurant"></section>
+{# PAGE LE RESTAURANT #}
+    <main>
+        {# HERO #}
+        <section class="hero hero-restaurant"></section>
 
-    {# INTRODUCTION #}
-    <section class="intro">
-      <h1 class="intro__title">{{ title }}</h1>
-      <p class="intro__text">La nourriture y est généralement préparée par un chef cuisinier. 
-        Le terme couvre une multiplicité de lieux et une grande diversité des types de cuisines, tant locales qu'étrangères. </p>
-    </section>
+        {# INTRODUCTION #}
+        <section class="intro">
+            <h1 class="intro__title">{{ title }}</h1>
+            <p class="intro__text">La nourriture y est généralement préparée par un chef cuisinier. 
+                Le terme couvre une multiplicité de lieux et une grande diversité des types de cuisines, tant locales qu'étrangères.
+            </p>
+            
+        </section>
 
-    
-</main>
+        {# NAVIGATION #}
+        <nav class="navigation">
+            <a href="#histoire" class="nav__link">Histoire</a>
+            <a href="#team" class="nav__link">Notre équipe</a>
+        </nav>
+
+        {# HISTOIRE #}
+        <section id="histoire" class="histoire">
+            <h2 class="histoire__title">Notre Histoire</h2>
+            <div class="histoire__bloc">
+                <figure class="histoire__figure">
+                    <img src="https://images.unsplash.com/photo-1559131463-f9386f12e2db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80" alt="" class="histoire__img">
+                </figure>
+                <p class="histoire__text">
+                    Le système de signalisation maritime est constitué d'un puissant système d'éclairage placé généralement en haut d'une tour. <br>
+                    Ces phares maritimes sont généralement placés près de la côte. 
+                    Ils permettent aux navires de repérer la position des zones dangereuses se trouvant près des côtes, ainsi que les ports maritimes.
+                </p>
+            </div>
+            <div class="histoire__bloc">
+                <figure class="histoire__figure">
+                    <img src="https://images.unsplash.com/photo-1512822999866-f690681f3952?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="" class="histoire__img">
+                </figure>
+                <p class="histoire__text">
+                    Un navire est un bateau destiné à la navigation maritime, c'est-à-dire prévu pour naviguer au-delà de la limite où cessent de s'appliquer les règlements techniques de sécurité de navigation intérieure et où commencent à s'appliquer les règlements de navigation maritime1.
+                </p>
+            </div>
+            <div class="histoire__bloc">
+                <figure class="histoire__figure">
+                    <img src="https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="" class="histoire__img">
+                </figure>
+                <p class="histoire__text">
+                    Un repas est un ensemble de nourriture composée de divers mets et de boisson que l'on absorbe à des heures précises de la journée. Par extension, le repas est une action spécifique, consacrée à l'alimentation, qui entre dans le cycle des activités journalières.
+                </p>
+            </div>
+        </section>
+
+        {# EQUIPE #}
+        <section id="team" class="team">
+            <h2 class="team__title">Notre équipe</h2>
+            <p class="team__intro">Un organigramme sert à indiquer la répartition des responsables, d'ensembles de tâches entre les postes, et les relations de commandement qui existent entre eux.</p>
+            <div class="team__content">
+                <div class="team__card">
+                    <figure class="team__figure">
+                        <img src="images/photos/team/Quirino_Lombardi.jpg" alt="" class="team__photo">
+                    </figure>
+                    <div class="team__desc">
+                        <p class="team__name">Quirino Lombardi</p>
+                        <p class="team__poste">Responsable</p>
+                    </div>
+                </div>
+
+                <div class="team__card">
+                    <figure class="team__figure">
+                        <img src="images/photos/team/Amelie_Dufour.jpg" alt="" class="team__photo">
+                    </figure>
+                    <div class="team__desc">
+                        <p class="team__name">Amélie Dufour</p>
+                        <p class="team__poste">Chef de rang</p>
+                    </div>
+                </div>
+
+                <div class="team__card">
+                    <figure class="team__figure">
+                        <img src="images/photos/team/Olivia_Blasco.jpg" alt="" class="team__photo">
+                    </figure>
+                    <div class="team__desc">
+                        <p class="team__name">Olivia Blasco</p>
+                        <p class="team__poste">Chef de Cuisinière</p>
+                    </div>
+                </div>
+
+                <div class="team__card">
+                    <figure class="team__figure">
+                        <img src="images/photos/team/James_van_de_Pol.jpg" alt="" class="team__photo">
+                    </figure>
+                    <div class="team__desc">
+                        <p class="team__name">James van de Pol</p>
+                        <p class="team__poste">Second</p>
+                    </div>
+                </div>
+                <div class="team__card">
+                    <figure class="team__figure">
+                        <img src="images/photos/team/Aleksandar_Zagar.jpg" alt="" class="team__photo">
+                    </figure>
+                    <div class="team__desc">
+                        <p class="team__name">Aleksandar Zagar</p>
+                        <p class="team__poste">Serveur</p>
+                    </div>
+                </div>
+                <div class="team__card">
+                    <figure class="team__figure">
+                        <img src="images/photos/team/Clemence_Besson.jpg" alt="" class="team__photo">
+                    </figure>
+                    <div class="team__desc">
+                        <p class="team__name">Clémence Besson</p>
+                        <p class="team__poste">Serveuse</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
 
 {% endblock %}

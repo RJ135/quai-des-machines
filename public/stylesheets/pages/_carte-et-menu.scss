@@ -1,0 +1,115 @@
+// * STYLES PAGE CARTE
+
+// HERO IMAGE CARTE
+.hero-carte{
+    background: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") center center / cover no-repeat;
+}
+
+// CARTE
+.carte {
+    display: flex;
+    // border: 1px solid rgb(88, 176, 161);
+    flex-direction: column;
+    align-items: center;
+    &__title{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        align-items: center;
+        padding: 3.2rem 1.6rem;
+    }
+
+    &__content{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3.2rem;
+            max-width: 1440px;
+        }
+
+    &__categories{
+        display: flex;
+        width: 100%;
+        position: sticky;
+        top: 7rem;
+        background-color: $oxford_blue;
+        border-bottom: 1px solid $white;
+    }
+    &__titlecategory{
+        // border: 1px solid rgb(255, 255, 255);
+        text-align: center;
+        padding: .8rem;
+        flex: 1;
+        cursor: pointer;
+        color: $cta;
+    }
+
+    
+    &__dishbloc{
+        display: flex;
+        padding: 4.38rem 1.6rem;
+        gap: 1.6rem;
+        flex-direction: column;
+        border: 1px solid rgb(158, 15, 15);
+        text-align: center;
+        max-width: 100%;
+    }
+    &__dishname{
+        font-family: RSbold;
+        font-size: 2rem;
+    }
+    &__dishdesc{
+        font-size: 1.4rem;
+        text-align: center;
+        max-width: 75ch;
+    }
+    &__dishprice{
+        font-family: ARbold;
+        font-size: 3.2rem;
+    }
+
+    &__cta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        @extend %mobile_flex_gap_pad;
+        span{
+            font-size: 1.4rem;
+        }
+    }
+    &__btn{
+        display: flex;
+        gap: 1.6rem;
+        width: fit-content;
+        white-space: nowrap;
+    }
+
+
+    @media screen and (min-width: 768px) {
+        @include desktop_flex_gap_pad;
+        &__content{
+            gap: 3.2rem;
+            
+        }
+        &__categories{
+            position: initial;
+            max-width: 60rem;
+        }
+        &__dishs{
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 4rem;
+            width: 100%;
+        }
+        &__dishbloc{
+            // max-width: 50%;
+            flex-grow: 75ch;
+            align-items: center;
+        }
+    }
+}
