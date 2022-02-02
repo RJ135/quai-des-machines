@@ -2,7 +2,92 @@
 
 {% block body %}
 <main>
-    <h1>Page {{ title }} </h1>
+    {# TITLE #}
+    <h1 class="title">{{ title }}</h1>
+
+    {# NAVIGATION #}
+    <nav class="navigation">
+        <a href="#restaurant" class="navigation__link">Restaurant</a>
+        <a href="#dishes" class="navigation__link">Nos plats</a>
+    </nav>
+
+    {# RESTAURANT #}
+    <section id="restaurant" class="restaurant">
+        <h2 class="restaurant__title">Restaurant</h2>
+        <div class="restaurant__galerie">
+            <figure class="restaurant__figure">
+                <img src="https://fakeimg.pl/200/000/?text=1" alt="" class="restaurant__photo">
+            </figure>
+            <figure class="restaurant__figure">
+                <img src="https://fakeimg.pl/200/000/?text=2" alt="" class="restaurant__photo">
+            </figure>
+            <figure class="restaurant__figure">
+                <img src="https://fakeimg.pl/200/000/?text=3" alt="" class="restaurant__photo">
+            </figure>
+            <figure class="restaurant__figure">
+                <img src="https://fakeimg.pl/200/000/?text=4" alt="" class="restaurant__photo">
+            </figure>
+            <figure class="restaurant__figure">
+                <img src="https://fakeimg.pl/200/000/?text=5" alt="" class="restaurant__photo">
+            </figure>
+            <figure class="restaurant__figure">
+                <img src="https://fakeimg.pl/200/000/?text=6" alt="" class="restaurant__photo">
+            </figure>
+            <figure class="restaurant__figure">
+                <img src="https://fakeimg.pl/200/000/?text=7" alt="" class="restaurant__photo">
+            </figure>
+            <figure class="restaurant__figure">
+                <img src="https://fakeimg.pl/200/000/?text=8" alt="" class="restaurant__photo">
+            </figure>
+            <figure class="restaurant__figure">
+                <img src="https://fakeimg.pl/200/000/?text=9" alt="" class="restaurant__photo">
+            </figure>
+        </div>
+    </section>
+
+    {# NOS PLATS #}
+    <section id="dishes" class="dishes">
+        <h2 class="dishes__title">Nos Plats</h2>
+        <div class="dishes__galerie">
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=1" alt="" class="dishes__photo">
+            </figure>
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=2" alt="" class="dishes__photo">
+            </figure>
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=3" alt="" class="dishes__photo">
+            </figure>
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=4" alt="" class="dishes__photo">
+            </figure>
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=5" alt="" class="dishes__photo">
+            </figure>
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=6" alt="" class="dishes__photo">
+            </figure>
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=7" alt="" class="dishes__photo">
+            </figure>
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=8" alt="" class="dishes__photo">
+            </figure>
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=9" alt="" class="dishes__photo">
+            </figure>
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=10" alt="" class="dishes__photo">
+            </figure>
+            <figure class="dishes__figure">
+                <img src="https://fakeimg.pl/200/000/?text=11" alt="" class="dishes__photo">
+            </figure>
+        </div>
+    </section>
+
+
+
+
 </main>
 
 {% endblock %}
