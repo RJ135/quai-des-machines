@@ -1,8 +1,123 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
+{# PAGE CONTACT #}
 <main>
-    <h1>Page {{ title }} </h1>
+    {# HERO #}
+    <section class="hero hero-contact"></section>
+
+    {# INTRODUCTION #}
+    <section class="intro">
+      <h1 class="intro__title">{{ title }}</h1>
+      <p class="intro__text">Une suggestion, un renseignement, ... gardons contact !</p>
+    </section>
+
+    {# NAVIGATION #}
+    <nav class="navigation">
+        <a href="#contact" class="navigation__link">Contact</a>
+        <a href="#acces" class="navigation__link">Accès</a>
+    </nav>
+
+    {# CONTACT #}
+    <section id="contact" class="contact">
+        <h2 class="contact__title">Contact</h2>
+        <form action="post" class="contact__form" autocomplete="off">
+            <div class="contact__field">
+                <label for="name" class="contact__label">Votre Nom *</label>
+                <input id="name" class="contact__input" type="text"  placeholder="Votre nom" required>
+            </div>
+
+            <div class="contact__field">
+                <label for="firstname" class="contact__label">Votre Prénom *</label>
+                <input id="firstname" class="contact__input" type="email"  placeholder="Votre adresse email" required>
+                <span class="contact__infoemail">Vous recevrez une confirmation de réception à cette adresse</span>
+            </div>
+
+            <div class="contact__field">
+                <label for="motif" class="contact__label">Motif *</label>
+                <select id="select_graphtype" class="contact__select" required>
+                    <option class="contact__option" value=""> Sélectionnez votre motif </option>
+                    <option class="contact__option" value="pie_chart"> Motif 1</option>
+                    <option class="contact__option" value="pie_chart"> Motif 2</option>
+                    <option class="contact__option" value="pie_chart"> Motif 3</option>
+                    <option class="contact__option" value="pie_chart"> Autre </option>
+                </select>
+            </div>
+
+            <div class="contact__field">
+                <label for="message" class="contact__label">Votre Message</label>
+                <textarea name="message" class="contact__message" id="message" cols="30" rows="10" placeholder="Ajouter votre message ..."></textarea>
+                <div class="contact__info">
+                    <ion-icon name="information-circle-outline"></ion-icon> 
+                    <p>Confidentialité des informations</p>
+                </div>
+            </div>
+
+            <button class="contact__btnsubmit" type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    {# ACCES #}
+    <section id="acces" class="acces">
+        <h2 class="acces__title">Accès</h2>
+        <figure class="acces__map">
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-1.5734696388244631%2C47.20240462578228%2C-1.5606486797332766%2C47.208337771135184&amp;layer=mapnik&amp;marker=47.20537566905173%2C-1.5670571573036796" ></iframe>
+            <small>
+                <ion-icon name="search-outline"></ion-icon>
+                <a href="https://www.openstreetmap.org/?mlat=47.20538&amp;mlon=-1.56706#map=17/47.20537/-1.56706">Afficher une carte plus grande</a>
+            </small>
+        </figure>
+
+        <div class="acces__address">
+            <h3 class="acces__title">Quai des machines</h3>
+            <address>
+                <p>Parc des Chantiers</p>
+                <p>boulevard Léon Bureau </p>
+                <p>44200 Nantes</p>
+                <p>GPS : 47.206472 / -1.564297</p>
+            </address>
+        </div>
+
+        <div class="acces__transport">
+            <h3 class="acces__title">Venir aux Quai des machines</h3>
+
+            <div class="acces__bloc">
+                <p class="acces__subtitle">En transport en commun</p>
+                <ul>
+                    <li>Tramway ligne 1 : arrêt « Chantiers Navals »</li>
+                    <li>Chronobus 5 : arrêt « Prairie au duc »</li>
+                    <li>Plus d’informations sur : <a href="#/">www.tan.fr</a></li>
+                </ul>
+            </div>
+            
+            <div class="acces__bloc">
+                <p class="acces__subtitle">En vélo</p>
+                <ul>
+                    <li>Station Bicloo n° 43 : Quai des Machines</li>
+                    <li>Plus d’informations sur : <a href="#/">www.bicloo.nantesmetropole.fr</a></li>
+                    <li>Service « Loire à Vélo », plus d’informations sur : <a href="#/">www.loireavelo.fr</a></li>
+                </ul>
+            </div>
+
+            <div class="acces__bloc">
+                <p class="acces__subtitle">Stationnement en voiture</p>
+                <ul>
+                    <li>Parking payant Les Machines</li>
+                    <li>Emplacements payants sur le Bd de la Prairie au Duc</li>
+                    <li>Parking gratuit : Quai Wilson</li>
+                </ul>
+            </div>
+
+            <div class="acces__links">
+                <a href="#/" class="acces__linkplus">Téléchargez le plan des stationnements pour personnes à mobilité réduite.</a>
+                <a href="#/" class="acces__linkplus">Stationnement en camping-car</a>
+            </div>
+
+        </div>
+    </section>
+
+
+
 </main>
 
 {% endblock %}

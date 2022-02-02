@@ -6,6 +6,7 @@ const iconBurger = document.querySelector(".header__burgericon")
 
 const navlink = document.querySelector(".header__navlink")
 
+
 function toggleMenu(){
     boxnav.classList.toggle("header__active")
     if (boxnav.classList.contains("header__active")) {

@@ -31,10 +31,7 @@
    src: url(../../font/roboto_slab/RobotoSlab-Bold.ttf);
 }
 
-//* PAGES
-@import "pages/carte-et-menu";
-@import "pages/restaurant";
-@import "pages/galerie";
+
 
 // BASE
 html,
@@ -54,15 +51,18 @@ body {
 }
 p,
 a,
-button {
+button, li{
    font-size: 1.6rem;
 }
-p {
+p , li{
    line-height: 1.6;
    color: darken($white , 20%);
 }
 a {
    color: $cta;
+}
+address{
+   font-style: normal;
 }
 button {
    font-family: ARmedium, sans-serif;
@@ -70,11 +70,18 @@ button {
    padding: 0.8em 1.6em;
    background-color: $cta;
 }
-input {
-   padding: 0.8em 1.6em;
-   outline: 1px solid $cta;
+input , select , option, textarea{
+   padding: 1.2rem;
    outline: none;
-   font-size: 1.6em;
+   font-size: 1.4rem;
+   &:focus{
+      outline: .02rem solid $cta;
+   }
+}
+input, textarea{
+   &:focus::placeholder{
+      color: transparent;
+   }
 }
 h1 {
    font-size: 4em;
@@ -104,6 +111,8 @@ main {
    margin-top: 70px;
    position: relative;
 }
+
+
 // ==== CUSTOM ====
 #wrapper {
    height: 100%;
@@ -300,6 +309,7 @@ main {
    }
    &__text {
       max-width: 63rem;
+      text-align: left;
    }
    @media screen and (min-width: 900px) {
       @include desktop_flex_gap_pad;
@@ -535,3 +545,9 @@ main {
         font-family: ARbold;
     }
 }
+
+//* PAGES
+@import "pages/carte-et-menu";
+@import "pages/restaurant";
+@import "pages/galerie";
+@import "pages/contact";
