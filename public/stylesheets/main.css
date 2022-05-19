@@ -462,6 +462,7 @@ body {
   background-color: #091729;
   color: #ffffff;
   position: relative;
+  font-size: 10px;
 }
 
 p,
@@ -683,20 +684,20 @@ main {
 }
 
 .hero {
-  height: 100vh;
+  height: 61vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: -16rem;
   z-index: 0;
 }
-.hero figure {
+.hero figure img {
   width: 40vw;
   max-width: 20rem;
 }
 @media screen and (min-width: 900px) {
   .hero {
-    height: 80vh;
+    height: 72vh;
   }
 }
 

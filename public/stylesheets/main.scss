@@ -48,6 +48,7 @@ body {
    background-color: $oxford_blue;
    color: $white;
    position: relative;
+   font-size: $font_size_root;
 }
 p,
 a,
@@ -267,20 +268,20 @@ main {
 
 // HERO BASE
 .hero {
-   height: 100vh;
+   height: 61vh;
    display: flex;
    align-items: center;
    justify-content: center;
    // outline: 1px solid rgb(252, 206, 2);
    margin-bottom: -16rem;
    z-index: 0;
-   figure {
+   figure img{
       width: 40vw;
       max-width: 20rem;
    }
 
    @media screen and (min-width: 900px) {
-      height: 80vh;
+      height: 72vh;
    }
 }
 // HERO page index

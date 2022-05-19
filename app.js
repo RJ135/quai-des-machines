@@ -6,7 +6,6 @@ var logger = require('morgan');
 var livereload = require('livereload');
 var connectLiveReload = require("connect-livereload");
 
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -22,7 +21,6 @@ liveReloadServer.server.once("connection", () => {
 var app = express();
 
 app.use(connectLiveReload());
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'twig');

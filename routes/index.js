@@ -10,7 +10,7 @@ const data = {
 router
 .get(['/','/accueil'], function(req, res, next) {
   res.render('index', {
-    data
+    title: 'Accueil'
   })
 })
 .get('/carte-et-menu', function(req, res, next) {
