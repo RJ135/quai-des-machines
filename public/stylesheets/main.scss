@@ -132,7 +132,7 @@ main {
       justify-content: space-between;
       align-items: center;
       padding: 1.6em;
-      border-bottom: 1px solid #ffffff;
+      // border-bottom: 1px solid #ffffff;
       z-index: 2;
       position: relative;
    }
@@ -271,7 +271,7 @@ main {
    display: flex;
    align-items: center;
    justify-content: center;
-   outline: 1px solid rgb(252, 206, 2);
+   // outline: 1px solid rgb(252, 206, 2);
    margin-bottom: -16rem;
    z-index: 0;
    figure {
@@ -296,7 +296,7 @@ main {
    @extend %mobile_flex_gap_pad;
    flex-direction: column;
    align-items: center;
-   outline: 1px solid #ff0000;
+   // outline: 1px solid #ff0000;
    background: $oxford_blue;
    background: linear-gradient(
       180deg,
@@ -323,7 +323,7 @@ main {
    flex-direction: column;
    align-items: center;
    gap: 4rem;
-   outline: 1px solid rgb(0, 255, 8);
+   // outline: 1px solid rgb(0, 255, 8);
    text-align: center;
    position: relative;
    &__header {
@@ -347,7 +347,7 @@ main {
       gap: 1.6em;
       min-width: 32rem;
       padding: 2.4rem;
-      border: 1px solid rgb(255, 241, 241);
+      // border: 1px solid rgb(255, 241, 241);
    }
    &__separator {
       font-weight: bold;
@@ -391,10 +391,10 @@ main {
    justify-content: center;
    flex-wrap: wrap;
    gap: 8rem;
-   outline: 1px solid rgb(255, 0, 106);
+   // outline: 1px solid rgb(255, 0, 106);
    text-align: left;
    &__bloc {
-      outline: 1px solid rgb(255, 255, 255);
+      // outline: 1px solid rgb(255, 255, 255);
       display: flex;
       flex-direction: column;
       gap: 1.6rem;
@@ -422,7 +422,7 @@ main {
    align-items: center;
    text-align: center;
    gap: 1.6em;
-   outline: 1px solid rgb(0, 255, 242);
+   // outline: 1px solid rgb(0, 255, 242);
 
    &__infos {
       font-size: 1.4rem;
@@ -448,7 +448,7 @@ main {
 // FOOTER
 .footer {
    padding: 4.8em 1.6em 8em; //! 48px  et 80px bottom different des autre section au dessu
-   outline: 1px solid rgb(229, 255, 0);
+   // outline: 1px solid rgb(229, 255, 0);
    display: flex;
    flex-direction: column;
    justify-content: space-around;
