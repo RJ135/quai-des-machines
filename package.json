@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "start": "node index.js",
     "watch": "nodemon --ext html,css,js,twig"
   },
   "dependencies": {
